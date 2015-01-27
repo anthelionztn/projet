@@ -1,0 +1,282 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00    30096     0.00     0.00  xtime
+  0.00      0.00     0.00     1760     0.00     0.00  getSBoxValue
+  0.00      0.00     0.00      800     0.00     0.00  getSBoxInvert
+  0.00      0.00     0.00      154     0.00     0.00  AddRoundKey
+  0.00      0.00     0.00       90     0.00     0.00  ShiftRows
+  0.00      0.00     0.00       90     0.00     0.00  SubBytes
+  0.00      0.00     0.00       81     0.00     0.00  MixColumns
+  0.00      0.00     0.00       50     0.00     0.00  InvShiftRows
+  0.00      0.00     0.00       50     0.00     0.00  InvSubBytes
+  0.00      0.00     0.00       45     0.00     0.00  InvMixColumns
+  0.00      0.00     0.00       19     0.00     0.00  BlockCopy
+  0.00      0.00     0.00        9     0.00     0.00  Cipher
+  0.00      0.00     0.00        9     0.00     0.00  phex
+  0.00      0.00     0.00        8     0.00     0.00  KeyExpansion
+  0.00      0.00     0.00        8     0.00     0.00  XorWithIv
+  0.00      0.00     0.00        5     0.00     0.00  AES128_ECB_encrypt
+  0.00      0.00     0.00        5     0.00     0.00  InvCipher
+  0.00      0.00     0.00        4     0.00     0.00  AES128_CBC_decrypt_buffer
+  0.00      0.00     0.00        1     0.00     0.00  AES128_CBC_encrypt_buffer
+  0.00      0.00     0.00        1     0.00     0.00  AES128_ECB_decrypt
+  0.00      0.00     0.00        1     0.00     0.00  test_decrypt_cbc
+  0.00      0.00     0.00        1     0.00     0.00  test_decrypt_ecb
+  0.00      0.00     0.00        1     0.00     0.00  test_encrypt_cbc
+  0.00      0.00     0.00        1     0.00     0.00  test_encrypt_ecb
+  0.00      0.00     0.00        1     0.00     0.00  test_encrypt_ecb_verbose
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00    1296/30096       MixColumns [7]
+                0.00    0.00   28800/30096       InvMixColumns [10]
+[1]      0.0    0.00    0.00   30096         xtime [1]
+-----------------------------------------------
+                0.00    0.00     320/1760        KeyExpansion [14]
+                0.00    0.00    1440/1760        SubBytes [6]
+[2]      0.0    0.00    0.00    1760         getSBoxValue [2]
+-----------------------------------------------
+                0.00    0.00     800/800         InvSubBytes [9]
+[3]      0.0    0.00    0.00     800         getSBoxInvert [3]
+-----------------------------------------------
+                0.00    0.00      55/154         InvCipher [17]
+                0.00    0.00      99/154         Cipher [12]
+[4]      0.0    0.00    0.00     154         AddRoundKey [4]
+-----------------------------------------------
+                0.00    0.00      90/90          Cipher [12]
+[5]      0.0    0.00    0.00      90         ShiftRows [5]
+-----------------------------------------------
+                0.00    0.00      90/90          Cipher [12]
+[6]      0.0    0.00    0.00      90         SubBytes [6]
+                0.00    0.00    1440/1760        getSBoxValue [2]
+-----------------------------------------------
+                0.00    0.00      81/81          Cipher [12]
+[7]      0.0    0.00    0.00      81         MixColumns [7]
+                0.00    0.00    1296/30096       xtime [1]
+-----------------------------------------------
+                0.00    0.00      50/50          InvCipher [17]
+[8]      0.0    0.00    0.00      50         InvShiftRows [8]
+-----------------------------------------------
+                0.00    0.00      50/50          InvCipher [17]
+[9]      0.0    0.00    0.00      50         InvSubBytes [9]
+                0.00    0.00     800/800         getSBoxInvert [3]
+-----------------------------------------------
+                0.00    0.00      45/45          InvCipher [17]
+[10]     0.0    0.00    0.00      45         InvMixColumns [10]
+                0.00    0.00   28800/30096       xtime [1]
+-----------------------------------------------
+                0.00    0.00       1/19          AES128_ECB_decrypt [20]
+                0.00    0.00       5/19          AES128_ECB_encrypt [16]
+                0.00    0.00       5/19          AES128_CBC_encrypt_buffer [19]
+                0.00    0.00       8/19          AES128_CBC_decrypt_buffer [18]
+[11]     0.0    0.00    0.00      19         BlockCopy [11]
+-----------------------------------------------
+                0.00    0.00       4/9           AES128_CBC_encrypt_buffer [19]
+                0.00    0.00       5/9           AES128_ECB_encrypt [16]
+[12]     0.0    0.00    0.00       9         Cipher [12]
+                0.00    0.00      99/154         AddRoundKey [4]
+                0.00    0.00      90/90          SubBytes [6]
+                0.00    0.00      90/90          ShiftRows [5]
+                0.00    0.00      81/81          MixColumns [7]
+-----------------------------------------------
+                0.00    0.00       9/9           test_encrypt_ecb_verbose [25]
+[13]     0.0    0.00    0.00       9         phex [13]
+-----------------------------------------------
+                0.00    0.00       1/8           AES128_ECB_decrypt [20]
+                0.00    0.00       1/8           AES128_CBC_encrypt_buffer [19]
+                0.00    0.00       1/8           AES128_CBC_decrypt_buffer [18]
+                0.00    0.00       5/8           AES128_ECB_encrypt [16]
+[14]     0.0    0.00    0.00       8         KeyExpansion [14]
+                0.00    0.00     320/1760        getSBoxValue [2]
+-----------------------------------------------
+                0.00    0.00       4/8           AES128_CBC_encrypt_buffer [19]
+                0.00    0.00       4/8           AES128_CBC_decrypt_buffer [18]
+[15]     0.0    0.00    0.00       8         XorWithIv [15]
+-----------------------------------------------
+                0.00    0.00       1/5           test_encrypt_ecb [24]
+                0.00    0.00       4/5           test_encrypt_ecb_verbose [25]
+[16]     0.0    0.00    0.00       5         AES128_ECB_encrypt [16]
+                0.00    0.00       5/19          BlockCopy [11]
+                0.00    0.00       5/8           KeyExpansion [14]
+                0.00    0.00       5/9           Cipher [12]
+-----------------------------------------------
+                0.00    0.00       1/5           AES128_ECB_decrypt [20]
+                0.00    0.00       4/5           AES128_CBC_decrypt_buffer [18]
+[17]     0.0    0.00    0.00       5         InvCipher [17]
+                0.00    0.00      55/154         AddRoundKey [4]
+                0.00    0.00      50/50          InvSubBytes [9]
+                0.00    0.00      50/50          InvShiftRows [8]
+                0.00    0.00      45/45          InvMixColumns [10]
+-----------------------------------------------
+                0.00    0.00       4/4           test_decrypt_cbc [21]
+[18]     0.0    0.00    0.00       4         AES128_CBC_decrypt_buffer [18]
+                0.00    0.00       8/19          BlockCopy [11]
+                0.00    0.00       4/8           XorWithIv [15]
+                0.00    0.00       4/5           InvCipher [17]
+                0.00    0.00       1/8           KeyExpansion [14]
+-----------------------------------------------
+                0.00    0.00       1/1           test_encrypt_cbc [23]
+[19]     0.0    0.00    0.00       1         AES128_CBC_encrypt_buffer [19]
+                0.00    0.00       5/19          BlockCopy [11]
+                0.00    0.00       4/8           XorWithIv [15]
+                0.00    0.00       4/9           Cipher [12]
+                0.00    0.00       1/8           KeyExpansion [14]
+-----------------------------------------------
+                0.00    0.00       1/1           test_decrypt_ecb [22]
+[20]     0.0    0.00    0.00       1         AES128_ECB_decrypt [20]
+                0.00    0.00       1/19          BlockCopy [11]
+                0.00    0.00       1/8           KeyExpansion [14]
+                0.00    0.00       1/5           InvCipher [17]
+-----------------------------------------------
+                0.00    0.00       1/1           main [31]
+[21]     0.0    0.00    0.00       1         test_decrypt_cbc [21]
+                0.00    0.00       4/4           AES128_CBC_decrypt_buffer [18]
+-----------------------------------------------
+                0.00    0.00       1/1           main [31]
+[22]     0.0    0.00    0.00       1         test_decrypt_ecb [22]
+                0.00    0.00       1/1           AES128_ECB_decrypt [20]
+-----------------------------------------------
+                0.00    0.00       1/1           main [31]
+[23]     0.0    0.00    0.00       1         test_encrypt_cbc [23]
+                0.00    0.00       1/1           AES128_CBC_encrypt_buffer [19]
+-----------------------------------------------
+                0.00    0.00       1/1           main [31]
+[24]     0.0    0.00    0.00       1         test_encrypt_ecb [24]
+                0.00    0.00       1/5           AES128_ECB_encrypt [16]
+-----------------------------------------------
+                0.00    0.00       1/1           main [31]
+[25]     0.0    0.00    0.00       1         test_encrypt_ecb_verbose [25]
+                0.00    0.00       9/9           phex [13]
+                0.00    0.00       4/5           AES128_ECB_encrypt [16]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+
+Index by function name
+
+  [18] AES128_CBC_decrypt_buffer [8] InvShiftRows         [13] phex
+  [19] AES128_CBC_encrypt_buffer [9] InvSubBytes          [21] test_decrypt_cbc
+  [20] AES128_ECB_decrypt     [14] KeyExpansion           [22] test_decrypt_ecb
+  [16] AES128_ECB_encrypt      [7] MixColumns             [23] test_encrypt_cbc
+   [4] AddRoundKey             [5] ShiftRows              [24] test_encrypt_ecb
+  [11] BlockCopy               [6] SubBytes               [25] test_encrypt_ecb_verbose
+  [12] Cipher                 [15] XorWithIv               [1] xtime
+  [17] InvCipher               [3] getSBoxInvert
+  [10] InvMixColumns           [2] getSBoxValue
